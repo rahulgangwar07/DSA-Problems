@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DSA.Problems;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,8 @@ namespace DSA
             Console.WriteLine("Let's begin buddies😎");
             counterGameProblem.hallo(args);
 
-             
+            Console.WriteLine(sumXorr.sumXor(1000000000000000));
+
             //string name = week1.counterGame(132);
             //Console.WriteLine("Congrates "+ name);
         }
