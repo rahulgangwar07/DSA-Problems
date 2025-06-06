@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,16 +57,16 @@ namespace DSA.Problems
                 result.Add(sb.ToString());
             }
             return result;
-             
+
         }
 
         public static List<string> Explose(List<string> grid)
-        { 
+        {
             int rows = grid.Count;
             int cols = grid[0].Length;
             char[][] resultGrid = Enumerable.Range(0, rows).Select(_ => Enumerable.Repeat('O', cols).ToArray()).ToArray();
             for (int i = 0; i < rows; i++)
-            { 
+            {
                 for (int j = 0; j < cols; j++)
                 {
                     if (grid[i][j] == 'O')
@@ -77,10 +78,15 @@ namespace DSA.Problems
                         if (j < cols - 1) resultGrid[i][j + 1] = '.'; // Right
 
                     }
-                } 
+                }
             }
-            
+
             return resultGrid.Select(row => new string(row)).ToList();
         }
+
+        
+
+
     }
+
 }
