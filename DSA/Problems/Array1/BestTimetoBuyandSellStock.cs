@@ -17,6 +17,19 @@ namespace DSA.Array
         //    Console.Write(" "+ans[i]);
         //}
 
+        public int MaxProfit(int[] prices)
+        {
+            int maxProfit = 0;
+            int buyIndex = prices[0];
+            for (int i = 1; i < prices.Length; i++)
+            {
+                buyIndex = Math.Min(buyIndex, prices[i]);
+                int profit = prices[i] - buyIndex;
+                maxProfit = Math.Max(profit, maxProfit);
+            }
+            return maxProfit;
+        }
+
         public static int[] BestTimeNew(int[] arr)
         {
             int minPrice = arr[0];
