@@ -13,7 +13,7 @@ namespace DSA.Array3
         //stalls = [1, 2, 4, 8, 9]
         //cows = 3
         //output =  1   4   8
-
+         
         
         public static int Cows(int[] stalls,int cows)
         {
