@@ -10,7 +10,7 @@ namespace DSA.Array3
     internal class SingleElementinaSortedArray
     {
         //Input: nums = [1,1,2,3,3,4,4,8,8]
-        //Output: 2
+        //Output: 2 
 
         public int SingleNonDuplicate(int[] nums)
         {
