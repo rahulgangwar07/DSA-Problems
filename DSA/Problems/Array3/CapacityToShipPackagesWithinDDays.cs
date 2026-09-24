@@ -21,7 +21,7 @@ namespace DSA.Array3
 
             while (low < high)
             {
-                int mid = (low + high) / 2;
+                int mid = low + (high- low) / 2;
                 int Day = reqDays(weight, mid);
                 if (Day <= days)
                 {
